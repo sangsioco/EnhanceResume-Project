@@ -26,6 +26,7 @@ header h1 {
 .navbar {
     background-color: #333;
     padding: 10px;
+    width: 100%;
 }
 
 .navbar ul {
@@ -53,54 +54,76 @@ header h1 {
     color: #f0f0f0;
 }
 
-/* Main content styles */
 main {
-    flex: 1; /* Allow the main section to grow and take up remaining space */
     display: flex;
-    flex-direction: row; /* Arrange children in a row */
-    align-items: center; /* Center align items vertically */
-    justify-content: space-evenly; /* Center align items horizontally */
-    padding: 20px;
-}
-
-#gallery {
-    padding: 20px;
-    text-align: center;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
+    gap: 10px;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
 
-.column {
-    flex: 1;
-    min-width: 200px;
-    max-width: 400px;
-    margin: 10px;
+/* Thumbnail styles */
+.thumbnail {
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure image covers the container */
+    border-radius: 5px; /* Optional: rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for zoom effect */
 }
 
-.column img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s, box-shadow 0.3s;
+/* Hover effect */
+.thumbnail:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
 }
 
-.column img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
 
-.section-title {
-    text-align: center;
-    background-color: lightblue; 
-    color: #333;
-    padding: 15px; 
-    width: 100%;
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute; /* Position absolutely */
+    top: 50%; /* Position vertically in the center */
+    left: 50%; /* Position horizontally in the center */
+    transform: translate(-50%, -50%); /* Offset the content to center it */
 }
 
+
+/* Display modal when targeted */
+.modal:target {
+    display: flex; /* Show modal */
+}
+
+/* Close button styles */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+a.close {
+    cursor: pointer; /* Explicitly set the cursor */
+    user-select: none; /* Prevent text selection */
+}
+.close:hover,
+.close:focus {
+    color: #c21d1d;
+    text-decoration: none;
+}
 
 footer {
     background-color: #333;
@@ -108,17 +131,4 @@ footer {
     padding: 10px;
     text-align: center;
     margin-top: auto; /* Push footer to the bottom */
-}
-
-
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
 }
