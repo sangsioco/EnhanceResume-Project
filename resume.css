@@ -1,0 +1,217 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('background.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+}
+
+header h1 {
+    font-family: 'Adobe Caslon', serif; /* Corrected font-family spelling */
+    font-size: 100px; /* Adjusted for better balance */
+    color: whitesmoke;
+    margin: 0;
+    line-height: 1.1; /* Adjusted line height */
+    text-align: center; /* Center align text */
+    position: relative; /* Ensure positioning context */
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+/* Main content styles */
+main {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background color */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    flex: 1; /* Allow the main section to grow and take up remaining space */
+    display: flex;
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center; /* Center align items vertically */
+    justify-content: space-evenly; /* Center align items horizontally */
+    padding: 20px;
+    color: white;
+}
+
+.summary h2 {
+    position: relative;
+    margin-bottom: 20px; /* Space between title and content */
+}
+
+.summary h2::after {
+    content: "";
+    display: block;
+    width: 100%; /* Adjust the width of the line */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #fff; /* Line color */
+    position: absolute;
+    bottom: -10px; /* Position the line just below the text */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Center align the line */
+}
+.skills h2 {
+    position: relative;
+    margin-bottom: 20px; /* Space between title and content */ 
+}
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills ul li {
+    width: 45%;
+}
+
+.skills h2::after {
+    content: "";
+    display: block;
+    width: 100%; /* Adjust the width of the line */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #fff; /* Line color */
+    position: absolute;
+    bottom: -10px; /* Position the line just below the text */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Center align the line */
+}
+
+.experience h2 {
+    position: relative;
+    margin-bottom: 20px; /* Space between title and content */
+}
+
+.experience h2::after {
+    content: "";
+    display: block;
+    width: 100%; /* Adjust the width of the line */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #fff; /* Line color */
+    position: absolute;
+    bottom: -10px; /* Position the line just below the text */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Center align the line */
+}
+
+.job {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.job-details {
+    flex: 1;
+}
+
+.job ul {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset margins and paddings for elements within the .job class */
+.job h3,
+.job p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.education h2 {
+    position: relative;
+    margin-bottom: 20px; /* Space between title and content */
+}
+
+.education h2::after {
+    content: "";
+    display: block;
+    width: 100%; /* Adjust the width of the line */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #fff; /* Line color */
+    position: absolute;
+    bottom: -10px; /* Position the line just below the text */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Center align the line */
+}
+
+.education-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.education-details {
+    flex: 1;
+}
+
+.education ul {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px; /* Optional: Adjust the padding as needed */
+}
+
+/* Reset margins and paddings for elements within the .education class */
+.education h3,
+.education p {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}

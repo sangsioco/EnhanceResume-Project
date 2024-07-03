@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('background.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+}
+
+header h1 {
+    font-family: 'Adobe Caslon', serif; /* Corrected font-family spelling */
+    font-size: 100px; /* Adjusted for better balance */
+    color: whitesmoke;
+    margin: 0;
+    line-height: 1.1; /* Adjusted line height */
+    text-align: center; /* Center align text */
+    position: relative; /* Ensure positioning context */
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+/* Main content styles */
+main {
+    flex: 1; /* Allow the main section to grow and take up remaining space */
+    display: flex;
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center; /* Center align items vertically */
+    justify-content: space-evenly; /* Center align items horizontally */
+    padding: 20px;
+}
+
+#gallery {
+    padding: 20px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.column img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+    text-align: center;
+    background-color: lightblue; 
+    color: #333;
+    padding: 15px; 
+    width: 100%;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}

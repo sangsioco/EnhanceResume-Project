@@ -1,0 +1,136 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('background.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+}
+
+header h1 {
+    font-family: 'Adobe Caslon', serif; /* Corrected font-family spelling */
+    font-size: 100px; /* Adjusted for better balance */
+    color: whitesmoke;
+    margin: 0;
+    line-height: 1.1; /* Adjusted line height */
+    text-align: center; /* Center align text */
+    position: relative; /* Ensure positioning context */
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+/* Main content styles */
+main {
+    flex: 1; /* Allow the main section to grow and take up remaining space */
+    display: flex;
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center; /* Center align items vertically */
+    justify-content: space-evenly; /* Center align items horizontally */
+    padding: 20px;
+}
+
+.messages-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5%;
+}
+
+.messages-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.messages-form input, .messages-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.messages-form input:focus, .messages-form textarea:focus {
+    border-color: #ff4500;
+    outline: none;
+}
+
+.messages-form button {
+    background-color: royalblue;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.messages-form button:hover {
+    background-color: #ff6347;
+}
+
+.section-title {
+    text-align: center;
+    color: white;
+    padding: 15px; 
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}

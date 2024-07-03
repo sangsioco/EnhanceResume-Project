@@ -1,0 +1,105 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('background.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+}
+
+header h1 {
+    font-family: 'Adobe Caslon', serif; /* Corrected font-family spelling */
+    font-size: 170px; /* Adjusted for better balance */
+    color: whitesmoke;
+    margin: 0;
+    line-height: 1.1; /* Adjusted line height */
+    text-align: center; /* Center align text */
+    position: relative; /* Ensure positioning context */
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+/* Main content styles */
+main {
+    flex: 1; /* Allow the main section to grow and take up remaining space */
+    display: flex;
+    flex-direction: row; /* Arrange children in a row */
+    align-items: center; /* Center align items vertically */
+    justify-content: space-evenly; /* Center align items horizontally */
+    padding: 20px;
+}
+
+.profile-pic {
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: auto;
+}
+
+/* About section styles */
+.about {
+    display: flex;
+    color: white;
+    flex-direction: column; /* Arrange text content in a column */
+    align-items: flex-start; /* Align text to the start of the container */
+    max-width: 500px; /* Limit the width of the about section */
+}
+
+.about h2 {
+    margin-top: 0; /* Remove the top margin for the heading */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
