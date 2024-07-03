@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('../background.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+}
+
+header h1 {
+    font-family: 'Adobe Caslon', serif; /* Corrected font-family spelling */
+    font-size: 100px; /* Adjusted for better balance */
+    color: whitesmoke;
+    margin: 0;
+    line-height: 1.1; /* Adjusted line height */
+    text-align: center; /* Center align text */
+    position: relative; /* Ensure positioning context */
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+main {
+    padding: 10px; 
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    position: relative; /* Needed for the line to be positioned correctly */
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100%; /* Adjust the width of the line */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #333; /* Line color */
+    position: absolute;
+    bottom: -10px; /* Position the line just below the text */
+    left: 0;
+}
+
+.link-list {
+    padding: 10px;
+    margin: 0;
+    text-align: left; 
+    padding-left: 550px;
+}
+
+.link-list li {
+    margin: 10px 0;
+}
+
+.link-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.link-list a:hover {
+    text-decoration: underline;
+}
